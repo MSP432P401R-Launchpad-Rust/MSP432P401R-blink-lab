@@ -6,15 +6,11 @@ name = "lesson1"
 version = "0.1.0"
 
 [dependencies]
-msp432p401r = "0.1.2"
+msp432p401r = { git = "https://github.com/MSP432P401R-Launchpad-Rust/MSP432P401R-Peripheral-Access-API", features = ["rt"] }
 cortex-m = "0.6.2"
 cortex-m-rt = "0.6.12"
 cortex-m-semihosting = "0.3.5"
 panic-halt = "0.2.0"
-
-# This is a ptach for the untagged-option crate, which the cortex-m crate depends on.
-[patch.crates-io]
-untagged-option = { git = "https://github.com/jonas-schievink/untagged-option.git", rev = "80adfcf2874848060c14b561d669187c2a7cbacc" }
 
 # this lets you use `cargo fix`!
 [[bin]]
